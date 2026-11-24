@@ -93,3 +93,113 @@ I used `mkdir` to create the `01-linux` directory for organizing my Linux learni
 **FDE relevance:**
 
 Directories can be used to organize scripts, logs, configuration files, test data, and troubleshooting artifacts.
+
+## 2. Working with Files and Directories
+
+### `touch`
+
+**What it does:**
+
+`touch` creates an empty file if the file does not already exist. If the file already exists, it updates the file's timestamp without removing its contents.
+
+**Example:**
+
+```bash
+touch test.log
+```
+
+**What I learned:**
+
+I used `touch` to create files that can later be used for logs, test data, scripts, or other troubleshooting activities.
+
+**FDE relevance:**
+
+FDE work often involves creating log files, test files, scripts, and diagnostic artifacts while troubleshooting or validating an environment.
+
+---
+
+### `cat`
+
+**What it does:**
+
+`cat` displays the contents of a file in the terminal.
+
+**Example:**
+
+```bash
+cat warehouse.log
+```
+
+**What I learned:**
+
+`cat` is useful for quickly viewing the contents of a log or text file. It displays the file contents; it does not list files inside a directory.
+
+**FDE relevance:**
+
+During troubleshooting, `cat` can be used to quickly inspect configuration files, logs, test data, and diagnostic output.
+
+---
+
+### `echo`
+
+**What it does:**
+
+`echo` displays text in the terminal and can also be used with redirection to write text into a file.
+
+**Example:**
+
+```bash
+echo "Health check started"
+```
+
+**What I learned:**
+
+I learned that `echo` can be combined with `>` and `>>` to write information into files.
+
+**FDE relevance:**
+
+`echo` can be useful in Bash scripts for displaying status messages and recording diagnostic information.
+
+---
+
+### `>` — Overwrite / Redirect
+
+**What it does:**
+
+`>` redirects output into a file. If the file already contains information, its existing contents are overwritten.
+
+**Example:**
+
+```bash
+echo "System started" > system.log
+```
+
+**What I learned:**
+
+A single `>` replaces the existing contents of the target file.
+
+**FDE relevance:**
+
+Output redirection can be useful when creating a fresh diagnostic or test output file.
+
+---
+
+### `>>` — Append / Redirect
+
+**What it does:**
+
+`>>` redirects output into a file while preserving the existing contents and adding the new information at the end.
+
+**Example:**
+
+```bash
+echo "Health check completed" >> system.log
+```
+
+**What I learned:**
+
+A double `>>` appends information instead of overwriting the existing file.
+
+**FDE relevance:**
+
+Appending is particularly useful for maintaining diagnostic or operational logs where previous entries must be preserved.
